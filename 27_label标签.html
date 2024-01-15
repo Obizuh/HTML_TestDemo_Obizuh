@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>label标签写法</title>
+</head>
+<body>
+  性别：
+  <!-- label的第一种写法 -->
+  <!-- name属性值是给单选框分组，以实现单选的功能，比如性别里选男则不选女，选女则不选男 -->
+  <input type="radio" name="gender" id="man"> <label for="man">男</label>
+  <input type="radio" name="gender" id="woman"> <label for="woman">女</label>
+  <!-- label的第二种写法 -->
+  <label><input type="radio">女</label>
+</body>
+</html>
