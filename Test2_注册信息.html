@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人注册</title>
+</head>
+<body>
+  <h1>注册信息</h1>
+  <h2>个人信息</h2>
+  <label>姓名：<input type="text" placeholder="请输入真实姓名"></label>
+  <br>
+  <br>
+  <label>密码：<input type="password" placeholder="请输入密码"></label>
+  <br>
+  <br>
+  <label>确认密码：<input type="password" placeholder="请输入确认密码"></label>
+  <br><br>
+  <!-- 单选框中添加name属性，即可以把多个单选框划分为一组，这一组中只有一个能被选中 -->
+  <label>性别：<input type="radio" name="gender" checked>男</label>  
+  <label><input type="radio" name="gender">女</label>
+  <br><br>
+  居住城市：
+  <select>
+      <option>北京</option>
+      <option>上海</option>
+      <option>广州</option>
+      <option>深圳</option>
+      <option>武安</option>
+  </select>
+  <br><br>
+  <h2>教育经历</h2>
+  最高学历：
+  <select>
+    <option selected>博士</option>
+    <option>硕士</option>
+    <option>研究生</option>
+    <option>本科</option>
+    <option>专科</option>
+  </select>
+  <br><br><label>学校名称：
+  <input type="text"></label>
+  <br><br><label>所学专业：
+  <input type="text"></label>
+  <br><br><label>在校时间：
+  <select>
+    <option>2014</option>
+    <option>2015</option>
+    <option selected>2016</option>
+    <option>2017</option>
+    <option>2018</option>
+  </select>-</label>
+  <select >
+    <option>2019</option>
+    <option>2020</option>
+    <option>2021</option>
+    <option>2022</option>
+    <option>2033</option>
+  </select>
+  <h2>工作经历</h2>
+  <label>公司名称：<input type="text"></label>
+  <br><br>
+  <label for="">工作描述：<br><textarea></textarea></label>
+  <br><br>
+  <label><input type="checkbox">已阅读并同意以下协议：</label>
+  <br><br>
+  <ul>
+    <li><a href="#">《用户服务协议》</a></li>
+    <li><a href="#">《隐私政策》</a></li>
+  </ul>
+  <br><br>
+  <button type="submit">免费注册</button>
+  <button type="reset">重新填写</button>
+</body>
+</html>
