@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- documents 文件 -->
+<html lang="en">
+  <!-- 网页头部 ,存放给浏览器看的东西-->
+<head>
+  <!-- 定义编码格式UTF-8 -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5复习</title>
+</head>
+<!-- 网页身体，存放给用户看的代码 -->
+<body>
+  <!-- body与下面的所有标签都是嵌套关系 -->
+  <!-- 标签语法 -->
+  <strong>这是一个字体加粗的双标签，双标签中要包裹内容</strong>
+  <!-- br换行(break)浏览器不识别回车键，hr水平线  两个单标签-->
+  <br>
+  <hr>
+  <!--此时br和hr的关系是并列关系 -->
+  <h1>新闻的最高级标题(一级标题)，只能显示一次</h1>
+  <h2>二级标题，与一级标题的区别是</h2>
+  <h3>三级标题，标题与普通文字区别是，文字加粗，1-6级标题逐级减小字号</h3>
+  <!-- 文字格式化标签 -->
+  <strong>加粗标签</strong>
+  <em>倾斜</em>
+  <ins>文字下划线</ins>
+  <del>文字删除线</del>
+  <!-- 图像标签，src为图片文件的地址，可以是本地地址也可以是网络地址 img为必要属性  alt属性为替换文本 title为鼠标悬停在图片上显示的文字 width为图片的宽 hight为图片的高-->
+  <img src="./sheep.png" alt="懒羊羊" title="这是一个懒羊羊">
+  <!-- 属性名="属性值" -->
+  <!-- 相对路径为从当前文件夹开始，绝对路径为从盘符开始 -->
+  <!-- /表示进入某个文件夹  .为当前文件夹 ..为上一级文件夹-->
+  <!-- 超链接标签 anchor  href属性值为链接地址，必须属性 尖括号包裹的内容为附带超链接的文字 target属性值可实现在新标签页打开网页-->
+  <a href="./01_标签的写法.html"  target="_blank">超链接1.标签的写法</a>
+  <a href="#">空链接</a>
+  <!-- 音频标签audio src属性值为音频文件的地址，本地与远程都可以  controls属性值为显示音频控制面板，loop属性值为循环播放-->
+  <audio src="#" controls loop></audio>
+  <!-- 如果属性值和属性名为相同单词，则可以省略只写一个单词 -->
+  <!-- 视频标签video src属性值与audio标签相同，controls显示视频控制面板，loop为循环播放 -->
+  <video src="#" controls loop muted></video>
+  <!-- 列表标签分为三种：无序列表，有序列表，定义列表 -->
+  <!-- 无序列表为ul嵌套li，ul表示无序标签，li表示列表条目 -->
+  <br>
+  <ul>
+    <li>第一个条目</li>
+    <li>第二个条目</li>
+    <li>第三个条目</li>
+  </ul>
+  <br>
+  <!-- 有序列表，ol嵌套li -->
+  <ol>
+    <li>有序列表1</li>
+    <li>有序列表2</li>
+    <li>有序列表3</li>
+  </ol>
+  <!-- 定义列表，dl嵌套dt和dd，dl为定义列表，dt为定义列表的标题，dd为定义列表的描述详情 -->
+  <dl>
+    <dt>定义列表标题</dt>
+    <dd>列表描述详情</dd>
+  </dl>
+  <!-- 表格标签 table嵌套tr tr嵌套td/th   tr行  th表头单元格  td内容单元格-->
+  <!-- 属性border为表格添加边框线 -->
+  <table border>
+    <tr>
+      <th>表头</th>
+      <td>内容</td>
+      <td>内容</td>
+    </tr>
+  </table>
+  <!-- 表单input标签，收集用户输入的信息 -->
+  <!-- text属性值为文本框，输入单行文本 -->
+  <!-- placeholder占位文本属性值，显示提示信息 -->
+  账号：
+  <input type="text" placeholder="输入账号">
+  <br>密码：
+  <input type="password" placeholder="输入密码">
+  <br>单选：
+  <form >
+  <input type="radio" name="控件名称" checked>单选1
+  <input type="radio" name="控件名称2">单选2
+  </form>
+  <br>多选框：
+  <input type="checkbox">多选1
+  <input type="checkbox"  checked>多选2
+  <br>文件上传
+  <input type="file" placeholder="上传文件">
+  <br>上传多个文件
+  <input type="file" multiple>
+  <br>下拉菜单
+  <select >
+    <option>下拉1</option>
+    <option>下拉2</option>
+    <option>下拉3</option>
+    <option>下来4</option>
+    <option>下拉5</option>
+  </select>
+  <br>
+  <!-- 文本域，多行输入文本的表单控件textarea双标签 -->
+  <textarea cols="30" rows="10">这个是一个文本域</textarea>
+  <!-- label标签绑定文字和表单控件的关系，增大表单控件的点击范围 -->
+  <!-- form标签用来规定表单内缩放元素，将一些控件划分区域 -->
+  <!-- 按钮button -->
+  <br>点击提交：
+  <button type="submit">按钮</button>
+  <br>点击重置：
+  <button type="reset">重置</button>
+  <br>默认按钮无实际功能
+  <!-- 字符实体为了在网页中预留字符 -->
+  &nbsp;
+  &lt;
+  &gt;
+</body>
+</html>

@@ -1,0 +1,13 @@
+浏览器：edge，ie，chrome，firefox
+web前端：HTML、CSS、JavaScript、JQuery、Ajax、前端框架(VUE、React)
+面向对象：Java、C++、Python
+面向过程：C语言
+
+一、HTML发展历程
+HTML(1991)————>HTML4.0.1————>xhml————>HTML5
+HTML:超文本标记语言
+所谓的超文本，就是说除了能标记文本，还可以标记其他内容，如：图片，链接，音频，视频等。标记也称元素，就是完成某些功能的字符串
+XML：可扩展标记语言
+他的表现形式是给一个文档加一对标签，说明每段文字是干什么的
+XHTML：可扩展超文本标记语言
+HTML和XML结合，产生了XHTML，表现方式与超文本标记语言类似，语法更加严格
