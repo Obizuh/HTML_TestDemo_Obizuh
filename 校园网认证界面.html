@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园网认证系统</title>
+    <link rel="stylesheet" href="/portal/usertemp_computer/czjtxy-pc5/css/style.css?v=2">
+    <link rel="stylesheet" href="/portal/usertemp_computer/czjtxy-pc5/css/animate.min.css">
+    <script type="text/javascript" src="/portal/js/jquery.js"></script>
+    <script type="text/javascript" src="/portal/portalUtil.js"></script>
+    <script>
+        $(function () {
+            $("form").InitPortalConfig({
+                debug: true,
+                "smsContext": "0",
+                "submit": "#loginsubmit",
+                "useLocal": false,
+            });
+            $("input[name='lineType']").bind('click', function () {
+                $(".operator .item").removeClass("on");
+                $(this).parent().parent('.item').addClass("on");
+            });
+            $("#preSumbit").bind('click', function () {
+                if ($("#useridtmp").val() == '') {
+                    _alert('上网账号不能为空');
+                    $("#useridtmp").focus();
+                    hideLoading();
+                    return;
+                }
+                $("#userid").val($("#useridtmp").val() + ($("input[name='lineType']:checked").val() || ''));
+                if ($(".operator .on").size() == 0) {
+                    _alert("请选择接入网络的服务商");
+                    return;
+                }
+                throttle(checkSubmit);
+            })
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="container-left">
+                <div class="logo animate__animated animate__slideInDown">
+                    <img src="/portal/usertemp_computer/czjtxy-pc5/images/logo.png" height="100px" />
+                </div>
+                <div class="wifi animate__animated animate__slideInUp slow-1">
+                    <img src="/portal/usertemp_computer/czjtxy-pc5/images/wifiLogo.png" height="150px" />
+                </div>
+                <div class="system-title animate__animated animate__slideInUp slow-2">
+                    <p>校园网认证系统</p>
+                    <p>CAMPUS NETWORK AUTHENTICATION SYSTEM</p>
+                </div>
+
+            </div>
+            <div class="container-rigth">
+                <div class="login-container">
+                    <form>
+                        <h2 class="animate__animated animate__slideInDown">上网登录</h2>
+                        <div class="animate__animated animate__fadeIn">
+                            <div class="group-input">
+                                <i class="user"></i>
+                                <input type="hidden" id="userid" />
+                                <input type="text" id="useridtmp" placeholder="请输入上网账号"></input>
+                            </div>
+                            <div class="group-input">
+                                <i class="password"></i>
+                                <input type="password" id="passwd" placeholder="请输入上网密码"></input>
+                            </div>
+                            <div class="links">
+                                <div class="agree">
+                                    <label>
+                                        <input type="checkbox" checked id="read">
+                                        <div class="checkmark" id="serviceMsg"></div>
+                                    </label>
+                                    <span>上网协议</span>
+
+                                </div>
+                                <div><a href="http://10.40.4.3">上网须知</a></div>
+                            </div>
+                            <div class="operator">
+                                <div class="item yidong">
+                                    <label>
+                                        <input type="radio" name="lineType" value="yd">
+                                        <div class="checkmark"></div>
+                                    </label>
+                                    <i></i>
+                                </div>
+                                <div class="item dianxin">
+                                    <label>
+                                        <input type="radio" name="lineType" value="dx">
+                                        <div class="checkmark"></div>
+                                    </label>
+                                    <i></i>
+                                </div>
+                                <div class="item liantong">
+                                    <label>
+                                        <input type="radio" name="lineType" value="lt">
+                                        <div class="checkmark"></div>
+                                    </label>
+                                    <i></i>
+                                </div>
+                                <div class="item xiaoyuanwan">
+                                    <label>
+                                        <input type="radio" name="lineType" value="" >
+                                        <div class="checkmark"></div>
+                                    </label>
+                                    <i></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control animate__animated animate__slideInUp">
+                            <button class="btn btn-primary" type="button" id="preSumbit">登录</button>
+                        </div>
+                    </form>
+                  <font size="1"> 1. 根据国家网络实名制相关法律法规要求，所有校园网用户均需进行实名制认证，每个账号只允许用一个手机和一个电脑。</font><br><font size="1">
+2. 为提升同学们的上网体验，2023年寒假期间对认证系统版本进行升级，办理电信套餐的同学登录时请选择“电信”，办理移动套餐的同学登录时，请选择“移动”，未办理校园网同学，选择“校园内网”登录可访问校园内网。</font><br><font size="1">
+3. 学生宿舍网络维护联系方式: 移动用户:15100825150（微信同步）15731787775（微信同步）  电信用户:13011258769（微信同步）</font>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
